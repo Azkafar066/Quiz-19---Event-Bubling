@@ -1,0 +1,23 @@
+<div id="grandparent">
+    <div id="parent">
+      <button id="child">Klik Saya</button>
+    </div>
+  </div>
+  
+  <script>
+    // Event listener pada elemen child
+    document.getElementById('child').addEventListener('click', function () {
+      console.log('Event di elemen child');
+    });
+  
+    // Event listener pada elemen parent
+    document.getElementById('parent').addEventListener('click', function () {
+      console.log('Event di elemen parent');
+    });
+  
+    // Event listener pada elemen grandparent
+    document.getElementById('grandparent').addEventListener('click', function () {
+      console.log('Event di elemen grandparent');
+    });
+  </script>
+  

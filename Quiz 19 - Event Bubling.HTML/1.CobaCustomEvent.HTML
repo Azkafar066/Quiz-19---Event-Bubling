@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CobaCustomEvent.HTML</title>
+</head>
+<body>
+<script>
+// Membuat custom event
+const myEvent = new CustomEvent('myCustomEvent', {
+    detail: { message: 'Hello from custom event!', time: new Date() }
+});
+document.addEventListener('myCustomEvent', function(e) {
+    console.log('Custom event fired!');
+    console.log('Pesan:', e.detail.message);
+    console.log('Waktu:', e.detail.time);
+});
+// Memicu (trigger) custom event
+document.dispatchEvent(myEvent);
+</script>    
+</body>
+</html>
